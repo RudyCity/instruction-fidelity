@@ -22,28 +22,29 @@ Instruction Fidelity solves these issues by establishing a non-negotiable operat
 
 ---
 
-## The Five Core Laws
+## The Six Core Laws
 
-1. **Zero Unrequested Scope Creep**: Modify strictly what is required to satisfy the user request. Never perform unsolicited reformatting, package upgrades, or drive-by refactoring.
-2. **Zero Silent Omissions**: Every requirement, edge case, and deliverable must be tracked and addressed. Placeholder comments (`// TODO`, `...`, stubs) are strictly disallowed.
-3. **Negative Constraints Are Absolute**: Explicit prohibitions ("do not touch X", "do not add dependencies", "maintain existing signatures") override convenience. Violating a negative constraint is an immediate failure.
-4. **Evidence-Gated Completion**: Code explanations are never proof of functionality. Every deliverable must be verified with terminal evidence (compiler output, test suite results, exit code 0) before declaring completion.
-5. **Lossless Delegation Cascade**: When delegating work to subagents, swarms, or background processes, preserve all constraints and inspect raw execution diffs before accepting results.
+1. **Mandatory Interactive Approval Gate (Model 1)**: For every new user prompt, never immediately execute tools or modify files. State the understood intent, scope, and concrete action plan, then stop and wait for user confirmation ("Lanjut" / approval) before executing.
+2. **Zero Unrequested Scope Creep**: Modify strictly what is required to satisfy the user request. Never perform unsolicited reformatting, package upgrades, or drive-by refactoring.
+3. **Zero Silent Omissions**: Every requirement, edge case, and deliverable must be tracked and addressed. Placeholder comments (`// TODO`, `...`, stubs) are strictly disallowed.
+4. **Negative Constraints Are Absolute**: Explicit prohibitions ("do not touch X", "do not add dependencies", "maintain existing signatures") override convenience. Violating a negative constraint is an immediate failure.
+5. **Evidence-Gated Completion**: Code explanations are never proof of functionality. Every deliverable must be verified with terminal evidence (compiler output, test suite results, exit code 0) before declaring completion.
+6. **Lossless Delegation Cascade**: When delegating work to subagents, swarms, or background processes, preserve all constraints and inspect raw execution diffs before accepting results.
 
 ---
 
 ## The 5-Phase Execution Cycle
 
 ```
-[Phase 1: Ingest]    --> Extract primary objectives, deliverables, and positive/negative constraints.
+[Phase 1: Ingest & Confirm] --> Articulate intent & plan; STOP and wait for user approval ("Lanjut").
        │
-[Phase 2: Preflight] --> Run git status to detect concurrent agents; inspect existing code patterns.
+[Phase 2: Preflight]        --> Run git status to detect concurrent agents; inspect existing code patterns.
        │
-[Phase 3: Execute]   --> Make minimal, atomic code changes tailored strictly to the assigned scope.
+[Phase 3: Execute]          --> Make minimal, atomic code changes tailored strictly to the assigned scope.
        │
-[Phase 4: Verify]    --> Run build, unit tests, and live runtime commands; inspect git diff.
+[Phase 4: Verify]           --> Run build, unit tests, and live runtime commands; inspect git diff.
        │
-[Phase 5: Report]    --> Present completion status backed by actual terminal evidence and file links.
+[Phase 5: Report]           --> Present completion status backed by actual terminal evidence and file links.
 ```
 
 ---
@@ -69,7 +70,7 @@ This repository includes four deep-dive reference manuals located in [`reference
 | :--- | :--- |
 | [**Constraint Taxonomy & Parsing**](references/constraint-taxonomy-and-parsing.md) | Six-dimensional constraint classification ($C^+$, $C^-$, $C^{env}$, $C^{arch}$, $C^{imp}$, $C^{sec}$) and intent deconstruction. |
 | [**Delegation & Multi-Agent Contracts**](references/delegation-and-multi-agent-contracts.md) | Brief schema, non-interference directives, and 3-step parent receipt audits for subagent delegation. |
-| [**Rationalization Defense & Failure Modes**](references/rationalization-defense-and-failure-modes.md) | Detailed analysis of the 10 common AI rationalization traps and operational tripwires. |
+| [**Rationalization Defense & Failure Modes**](references/rationalization-defense-and-failure-modes.md) | Detailed analysis of the 11 common AI rationalization traps and operational tripwires. |
 | [**Verification Protocols & Evidence Ledger**](references/verification-protocols-and-evidence-ledger.md) | The 4-tier verification pipeline (Static, Unit/Regression, E2E/Live, Diff Audit) and tabular evidence tracking. |
 
 ---
