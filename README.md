@@ -44,8 +44,14 @@ Instruction Fidelity solves these issues by establishing a non-negotiable operat
        │
 [Phase 4: Verify]           --> Run build, unit tests, and live runtime commands; inspect git diff.
        │
-[Phase 5: Report]           --> Present completion status backed by actual terminal evidence and file links.
+[Phase 5: Report]           --> Present terminal evidence, file links, and 3-tier next steps (Must/Good/Nice).
 ```
+
+### Mandatory 3-Tier Next-Step Recommendations (Phase 5)
+Every task summary must conclude with structured, actionable next steps:
+1. 🔴 **Must-Have (Prioritas Kritis)**: Critical bug fixes, security gates, or urgent operational dependencies.
+2. 🟡 **Good-to-Have (Sangat Dianjurkan)**: Quality improvements, regression test coverage, or workflow automation.
+3. 🟢 **Nice-to-Have (Penyempurnaan Lanjutan)**: Optional polish, extended documentation, or future enhancements.
 
 ---
 
